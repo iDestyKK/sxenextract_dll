@@ -3,7 +3,6 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
-#include <windows.h>
 
 using namespace std;
 
@@ -159,15 +158,6 @@ void extractSXEN(string filepath, string directory) {
 		case 2: extract_sxen_v02(pak, path); break;
 	}
 	pak.close();
-}
-
-GMEXPORT double CreateJunkFile() {
-	std::ofstream fp;
-	std::string path = "test.junk";
-	fp.open(path.c_str());
-	fp.close();
-
-	return 0;
 }
 
 GMEXPORT double ExtractSXENContentsToFolder(char* a, char* b) {
